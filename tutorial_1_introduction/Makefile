@@ -1,10 +1,11 @@
-# Makefile to use in UPMEM SDK projects
+# Makefile for the first tutorial
 # Author: 		Kagan Dikmen (kagandikmen@outlook.com)
 # Creation: 	2025-01-19
 # Modification: 2025-01-19
 
 # UPMEM SDK needs to be procured and its environment setting
 # shell script needs to be sourced beforehand
+
 CLANG=dpu-upmem-dpurte-clang
 SOURCE=test
 
