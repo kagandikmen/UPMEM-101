@@ -1,4 +1,4 @@
-# Makefile for the first tutorial
+# Makefile for the second tutorial
 # Author: 		Kagan Dikmen (kagandikmen@outlook.com)
 # Creation: 	2025-01-19
 # Modification: 2025-01-19
@@ -7,10 +7,11 @@
 # shell script needs to be sourced beforehand
 
 CLANG = dpu-upmem-dpurte-clang
-SOURCE = test
+CFLAGS = -DNR_TASKLETS=3 -DSTACK_SIZE_DEFAULT=256 -DSTACK_SIZE_TASKLET_1=2048
+SOURCE = tasklet
 
 all: 
-	${CLANG} -o ${SOURCE}.o ${SOURCE}.c
+	${CLANG} ${CFLAGS} -o ${SOURCE}.o ${SOURCE}.c
 
 clean:
 	rm -rf *.o
